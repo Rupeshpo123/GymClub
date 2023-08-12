@@ -20,7 +20,7 @@ const userRoutes = require('./routes/users');
 const gymRoutes = require('./routes/gyms');
 const reviewRoutes = require('./routes/reviews');
 
-mongoose.connect('mongodb://localhost:27017/gym-club', {
+mongoose.connect(process.env.DB_URL, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
